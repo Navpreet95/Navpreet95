@@ -1,0 +1,73 @@
+/*
+
+NAME --> Navpreet Singh
+STUDENT ID --> 2010993014
+
+With the help of arduino NANO I am going to blink my name on arduino nano board (thruogh BUILTIN_LED) by using "MORSE CODE".
+
+*/
+
+void setup() {
+
+  pinMode(LED_BUILTIN, OUTPUT); // digital pin LED_BUILTIN is initialized as an output.
+}
+
+void blinkDot() {
+  digitalWrite(LED_BUILTIN, HIGH);           // turns the LED on
+  delay(500);                               // LED remains on for 0.5 seconds
+  digitalWrite(LED_BUILTIN, LOW);           // turns the LED off
+  delay(500);                               // LED remains off for 0.5 seconds
+}
+
+void blinkDash() {
+  digitalWrite(LED_BUILTIN, HIGH);     // turns the LED on
+  delay(1500);                         // LED remains on for 1.5 second
+  digitalWrite(LED_BUILTIN, LOW);      // turns the LED off
+  delay(500);                          // LED remains off for 0.5 second
+}
+
+void loop() {
+/*
+
+My name in Morse's code:
+
+NAVPREET
+N(−∙), A(∙−), V(∙∙∙−), P(∙−−∙), R(∙−∙), E(∙), E(∙), T(−).
+
+*/
+
+  blinkDash();     // N
+  blinkDot();
+  delay(2000);
+
+
+  blinkDot();    // A
+  blinkDash();
+  delay(2000);
+
+  blinkDot();    // V
+  blinkDot();   
+  blinkDot();   
+  blinkDash();
+  delay(2000);
+
+  blinkDot();   // P
+  blinkDash();
+  blinkDash();
+  blinkDot();
+  delay(2000);
+
+  blinkDot();  // R
+  blinkDash();
+  blinkDot();
+  delay(2000);
+
+  blinkDot(); // E
+  delay(2000);
+  
+  blinkDot();  // E
+  delay(2000);
+  
+  blinkDash(); // T
+  delay(2000);
+}
